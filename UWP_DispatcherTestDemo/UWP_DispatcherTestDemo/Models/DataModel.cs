@@ -53,25 +53,62 @@ namespace UWP_DispatcherTestDemo.Models
         //  come in handy
         //  private CancellationTokenSource CTS { get; set; }
 
-        public async Task SetContentAsync(string str)
+        public async Task SetContentAsync(string str,CancellationToken ct)
         {
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
               {
                   IsBusying = true;
-                  await Task.Delay(3500);
-                  IsBusying = false;
-                  Content = str;
+                  try
+                  {
+                      await Task.Delay(3500, ct);
+                      IsBusying = false;
+                      Content = str;
+                  }
+                  catch (Exception)
+                  {
+
+                      IsBusying = false;
+                      Content = "超时取消";
+                  }
+                  
               });
         }
-
-        public async Task JumpinQueue()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="cancelTime">ms: cancel operation after millisecond delay </param>
+        /// <returns></returns>
+        public async Task SetContentAsync(string str, int cancelafterms)
         {
-            await new Windows.UI.Xaml.Controls.UserControl().Dispatcher.RunAsync(CoreDispatcherPriority.High, async () =>
-             {
-                 await Task.Delay(3000);
-                 Content = "我是插队进来的";
-             });
+            var cts = new CancellationTokenSource(cancelafterms);
+            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
+            {
+                IsBusying = true;
+                try
+                {
+                    await Task.Delay(3500, cts.Token);
+                    IsBusying = false;
+                    Content = str;
+                }
+                catch (Exception)
+                {
+
+                    IsBusying = false;
+                    Content = "超时取消";
+                }
+
+            });
         }
+
+        //public async Task JumpinQueue()
+        //{
+        //    await new Windows.UI.Xaml.Controls.UserControl().Dispatcher.RunAsync(CoreDispatcherPriority.High, async () =>
+        //     {
+        //         await Task.Delay(3000);
+        //         Content = "我是插队进来的";
+        //     });
+        //}
 
         public void BlockThread(string str)
         {
