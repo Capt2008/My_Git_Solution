@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Ports>
+	<Port Name="Bayuquan" City="Yingkou">    
+		<Berth IsSeparable="false" No="A1" Length="200" MaxDepth="13.5" Capacity="Panama"></Berth>
+		<Berth IsSeparable="false" No="A2" Length="198" MaxDepth="13.5" Capacity="Panama"></Berth>
+		<Berth IsSeparable="false" No="A3" Length="240" MaxDepth="14.5" Capacity="Panama"></Berth>
+		<Berth IsSeparable="false" No="A6" Length="321" MaxDepth="20.4" Capacity="Panama"></Berth>
+		<Berth IsSeparable="false" No="B1" Length="170" MaxDepth="11.3" Capacity="Panama"></Berth>
+		<Berth IsSeparable="false" No="B2" Length="180" MaxDepth="12.2" Capacity="Handy"></Berth>
+		<Berth IsSeparable="true" No="B4">
+			<Berth IsSeparable="false" No="B4f" Length="125" MaxDepth="9.8" Capacity="Less10000"></Berth>
+			<Berth IsSeparable="false" No="B4a" Length="110" MaxDepth="8.7" Capacity="Less10000"></Berth>
+		</Berth>
+		<Berth IsSeparable="false" No="F3" Length="220" MaxDepth="14.5" Capacity="Panama"></Berth>
+		<Berth IsSeparable="true" No="F3">
+			<Berth IsSeparable="false" No="F3f" Length="185" MaxDepth="10.1" Capacity="Handymax"></Berth>
+			<Berth IsSeparable="false" No="F3a" Length="175" MaxDepth="12.7" Capacity="Panama"></Berth>
+		</Berth>
+	</Port>
+  <!--I'm a commentk-->
+	<Port Name="Jinzhou" City="Jinzhou">
+		<Berth IsSeparable="false" No="No1" Length="240" MaxDepth="14.7" Capacity="Panama"></Berth>
+		<Berth IsSeparable="false" No="No6" Length="321" MaxDepth="20.7" Capacity="Panama"></Berth>
+		<Berth IsSeparable="false" No="No11" Length="170" MaxDepth="11.1" Capacity="Panama"></Berth>
+		<Berth IsSeparable="false" No="No16" Length="180" MaxDepth="12.2" Capacity="Handy"></Berth>
+		<Berth IsSeparable="true" No="No3">
+			<Berth IsSeparable="false" No="No3f" Length="125" MaxDepth="9.8" Capacity="Less10000"></Berth>
+			<Berth IsSeparable="false" No="No3a" Length="110" MaxDepth="8.7" Capacity="Less10000"></Berth>
+		</Berth>
+	</Port>	
+</Ports>

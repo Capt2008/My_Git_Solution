@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="TestForUsing.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestForUsing"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <MediaElement Name="MusicPlayer" />
+        <TextBlock Name="MessageText" Text="MessageLable" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Margin="5,20"/>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Center" Height="60" Width="120" Content="PlayvzUsing"  Click="Button_Click"/>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Center" Height="60" Width="120" Content="NoUsing" Click="Button_Click_1"/>
+        <Button Name="CancelButton" HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="80" Content="Reload"  Click="CancelButton_Click"/>
+    </Grid>
+</Page>

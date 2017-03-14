@@ -1,0 +1,13 @@
+﻿<Application
+    x:Class="TestForUsing.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestForUsing"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <x:String x:Key="ida:ClientId">431368a7-d511-4e65-8aa1-b026cad8bbdb</x:String>
+        <x:String x:Key="ida:AADInstance">https://login.microsoftonline.com/</x:String>
+        <x:String x:Key="ida:Domain">officelast.com</x:String>
+    </Application.Resources>
+
+</Application>

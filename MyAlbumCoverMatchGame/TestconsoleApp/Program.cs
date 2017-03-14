@@ -4,9 +4,14 @@
 
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Threading.Tasks;
 using Windows.Foundation;
+using Windows.Graphics.Imaging;
 using Windows.Storage;
+using Windows.Storage.FileProperties;
+using Windows.Storage.Streams;
+using Windows.UI.Xaml.Media.Imaging;
 using static System.Console;
 
 namespace TestconsoleApp
@@ -16,6 +21,7 @@ namespace TestconsoleApp
         static void Main(string[] args)
         {
            
+
             #region 
             //var port = new Port();
             //WriteLine("Port is ready!");
@@ -72,14 +78,10 @@ namespace TestconsoleApp
             //    WriteLine(result.Count);
             //} 
             #endregion
-
-
-            ReadKey();
         }
-             
+
       
     }
-
 
 
     class Port
